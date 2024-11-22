@@ -338,6 +338,12 @@ a {
     font-weight: 500;
 }
 
+
+.bg-white .nav-link.active {
+    color: red !important;
+    font-weight: 500;
+}
+
 .transparent .btn-dark-color {
     background-color: var(--light-red-color);
 }

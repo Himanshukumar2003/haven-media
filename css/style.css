@@ -365,8 +365,13 @@ a {
     z-index: 1020;
 }
 
+.grid-img-two {
+    display: block;
+}
 
-
+.grid-img {
+    display: none
+}
 
 
 
@@ -1915,6 +1920,13 @@ a.link:hover {
 
 
 @media (max-width: 991px) {
+    .grid-img-two {
+        display: none !important;
+    }
+
+    .grid-img {
+        display: block !important;
+    }
 
     .calendly-inline-widget {
         height: 600px !important;

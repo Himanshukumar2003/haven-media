@@ -2000,7 +2000,7 @@ a.link:hover {
     background-color: white;
     position: relative;
     padding-top: 4em;
-    color: var(--accent-color);
+    color: var(--dark-color);
 }
 
 .destination {
@@ -2432,7 +2432,7 @@ p span {
 
 .social-icons a {
     margin: 0 15px;
-    color: var(--accent-color);
+    color: var(--dark-color);
     text-decoration: none;
     font-size: 30px;
 }
@@ -2447,7 +2447,7 @@ p span {
 .main-links a {
     text-decoration: none;
     margin: 0 15px;
-    color: var(--accent-color);
+    color: var(--dark-color);
 
 }
 
@@ -2459,7 +2459,7 @@ p span {
 }
 
 .copyright a {
-    color: var(--accent-color);
+    color: var(--dark-color);
 }
 
 
@@ -2495,7 +2495,7 @@ p span {
 
 .contacts-item .title {
     font-weight: 500;
-    color: var(--accent-color);
+    color: var(--dark-color);
     text-decoration: none;
 }
 
@@ -2643,4 +2643,10 @@ p span {
     100% {
         transform: translateX(-50%);
     }
+}
+
+
+.crative-img {
+    width: 100%;
+    border-radius: 40px;
 }

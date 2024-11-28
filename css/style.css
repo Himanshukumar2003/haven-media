@@ -129,6 +129,7 @@ h4 span {
 
 h5 {
     font-size: 24px;
+    font-weight: 700 !important;
 }
 
 
@@ -136,6 +137,7 @@ h5 {
 
 h6 {
     font-size: 21px;
+    font-weight: 700 !important;
 }
 
 span,
@@ -145,15 +147,15 @@ a {
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px !important;
 }
 
 .peragraph-result {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .peragraph-result span {
-    font-size: 18px !important;
+    font-size: 16px !important;
 }
 
 
@@ -1737,6 +1739,7 @@ a.link:hover {
 
     h5 {
         font-size: 18px;
+        font-weight: 700 !important;
     }
 
     h6 {

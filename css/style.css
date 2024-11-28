@@ -703,6 +703,11 @@ a {
 }
 
 
+.section-crouser {
+    padding: 4em 0;
+}
+
+
 .divider-element {
     letter-spacing: 2px;
     flex-shrink: 0;
@@ -1752,6 +1757,8 @@ a.link:hover {
     .section {
         padding: 4em 2em 4em 2em;
     }
+
+
 
     .divider {
         width: 330px;

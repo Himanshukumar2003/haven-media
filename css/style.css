@@ -54,12 +54,14 @@
     --light-red-color: #ff0404;
     --dark-color: #0b1f23;
     --light-color: #f9f9f9;
+
     --secondary-color: #151515;
     --text-color: #000000;
     --gray-color: #adadad;
     --accent-color: #ef251f;
+    --pbmit-blackish-color: #403226;
 
-
+    --bg-color-lite: rgba(255, 99, 99, 0.2);
 
     --font-1: "Lora", serif;
     --font-2: "Montserrat", sans-serif;
@@ -1220,7 +1222,7 @@ a {
     width: 70px;
     border-radius: 50% !important;
     /* border: solid 1px rgba(255, 255, 255, 0.5); */
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--bg-color-lite);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2550,7 +2552,7 @@ p span {
     width: 50px;
     height: 50px;
     position: absolute;
-    background-color: rgba(255, 99, 99, 0.2);
+    background-color: var(--bg-color-lite);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -2613,7 +2615,7 @@ p span {
     gap: 10px;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 99, 99, 0.2);
+    background-color: var(--bg-color-lite);
     font-size: 14px;
     font-weight: 500;
     text-align: center;
@@ -2649,4 +2651,181 @@ p span {
 .crative-img {
     width: 100%;
     border-radius: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Style 2 **/
+.pbmit-service-style-2 .pbmit-service-image-wrapper {
+    transition: all .5s ease-in-out
+}
+
+.pbmit-service-style-2 {
+    position: relative
+}
+
+.pbmit-service-style-2 .pbmit-featured-wrapper {
+    position: relative;
+    overflow: hidden;
+    transition: all .8s ease-in-out;
+    clip-path: polygon(0% 94.542%, 0% 5.401%, 0% 5.401%, 0.025% 4.805%, 0.111% 4.222%, 0.256% 3.657%, 0.456% 3.113%, 0.711% 2.594%, 1.017% 2.106%, 1.372% 1.652%, 1.773% 1.236%, 2.219% 0.863%, 2.707% 0.538%, 2.753% 0.514%, 2.753% 0.514%, 2.942% 0.416%, 3.135% 0.328%, 3.332% 0.25%, 3.532% 0.183%, 3.735% 0.126%, 3.941% 0.079%, 4.149% 0.043%, 4.358% 0.018%, 4.569% 0.004%, 4.781% -0%, 94.38% 0%, 94.38% 0%, 94.793% 0.01%, 95.202% 0.051%, 95.605% 0.123%, 96.001% 0.223%, 96.389% 0.353%, 96.766% 0.511%, 97.132% 0.697%, 97.484% 0.91%, 97.822% 1.149%, 98.143% 1.415%, 98.143% 1.415%, 98.284% 1.549%, 98.42% 1.687%, 98.551% 1.83%, 98.678% 1.977%, 98.799% 2.129%, 98.915% 2.285%, 99.026% 2.445%, 99.131% 2.609%, 99.231% 2.777%, 99.325% 2.948%, 99.325% 2.948%, 99.455% 3.217%, 99.571% 3.492%, 99.674% 3.772%, 99.763% 4.056%, 99.838% 4.345%, 99.899% 4.637%, 99.946% 4.932%, 99.978% 5.229%, 99.996% 5.528%, 100% 5.828%, 100% 77.83%, 100% 77.83%, 99.552% 78.96%, 99.028% 79.989%, 98.426% 80.919%, 97.745% 81.748%, 96.982% 82.476%, 96.137% 83.102%, 95.207% 83.627%, 94.19% 84.05%, 93.085% 84.371%, 91.889% 84.59%, 91.889% 84.59%, 91.176% 84.715%, 90.486% 84.895%, 89.822% 85.13%, 89.186% 85.421%, 88.581% 85.769%, 88.007% 86.173%, 87.468% 86.634%, 86.964% 87.152%, 86.499% 87.729%, 86.074% 88.363%, 86.074% 88.363%, 85.849% 88.732%, 85.637% 89.108%, 85.438% 89.491%, 85.251% 89.88%, 85.078% 90.276%, 84.917% 90.677%, 84.77% 91.084%, 84.637% 91.495%, 84.517% 91.912%, 84.41% 92.333%, 84.41% 92.333%, 84.119% 93.466%, 83.748% 94.521%, 83.294% 95.496%, 82.756% 96.39%, 82.132% 97.203%, 81.419% 97.932%, 80.617% 98.578%, 79.723% 99.139%, 78.734% 99.613%, 77.65% 100%, 4.643% 100%, 4.643% 100%, 4.476% 99.998%, 4.309% 99.988%, 4.144% 99.971%, 3.979% 99.946%, 3.816% 99.913%, 3.655% 99.873%, 3.495% 99.825%, 3.337% 99.769%, 3.182% 99.707%, 3.03% 99.637%, 2.984% 99.613%, 2.984% 99.613%, 2.45% 99.291%, 1.96% 98.915%, 1.519% 98.49%, 1.127% 98.02%, 0.789% 97.511%, 0.507% 96.967%, 0.285% 96.393%, 0.124% 95.795%, 0.028% 95.176%, -0% 94.542%);
+}
+
+.pbmit-service-style-2 .pbmit-service-image-wrapper img {
+    border-radius: 30px;
+    transition: all .4s ease-in-out;
+    width: 100%
+}
+
+.pbmit-service-style-2:hover .pbmit-service-image-wrapper img {
+    transform: scale(1.05)
+}
+
+.pbmit-service-style-2 .pbmit-featured-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 73%);
+}
+
+.pbmit-service-style-2 .pbminfotech-box-content {
+    position: relative;
+}
+
+.pbmit-service-style-2 .pbmit-content-box {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    z-index: 1;
+    width: calc(100% - 30%);
+}
+
+.pbmit-service-style-2 .pbmit-service-title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    color: white;
+
+}
+
+.pbmit-service-style-2 .pbmit-service-title a {
+    color: white;
+    font-size: 30px;
+}
+
+.pbmit-service-style-2 .pbmit-service-title:hover {
+    color: var(--accent-color);
+    font-weight: 900;
+}
+
+.pbmit-service-style-2 .pbmit-serv-cat {
+    display: none;
+}
+
+.pbmit-service-style-2 .pbmit-service-icon {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+}
+
+.pbmit-service-style-2 .pbmit-service-icon img {
+    width: 40px;
+    height: 40px
+}
+
+.pbmit-service-style-2 .pbmit-service-icon i {
+    font-size: 40px;
+    line-height: 40px;
+
+    color: white
+}
+
+.pbmit-service-style-2 .pbmit-service-icon svg {
+    fill: white
+}
+
+.pbmit-service-style-2 .pbmit-service-description {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    color: white;
+    font-size: 24px;
+}
+
+.pbmit-service-style-2:hover .pbmit-service-description {
+    opacity: 1;
+    height: 60px;
+}
+
+.pbmit-service-style-2.pbmit-ele-service .pbmit-service-btn {
+    color: white;
+    background-color: #ffffff;
+
+}
+
+.pbmit-service-btn {
+    font-weight: 600;
+    letter-spacing: -.25px;
+    text-transform: capitalize;
+    font-style: normal;
+}
+
+.pbmit-service-style-2 .pbminfotech-post-item {
+    position: relative;
+}
+
+.pbmit-service-style-2.pbmit-ele-service .pbmit-service-btn {
+    color: var(--pbmit-blackish-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.pbmit-ele-blog .pbmit-blog-btn,
+.pbmit-ele-service .pbmit-service-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pbmit-blackish-color);
+    background-color: white;
+    line-height: 50px;
+    font-size: 12px;
+    text-align: center;
+    transform: translate3d(0, 0, 0) rotateZ(0);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    transition: all .5s ease-in-out 0s;
+    z-index: 2;
+}
+
+.pbmit-ele-service:hover .pbmit-service-btn {
+    background-color: var(--accent-color);
+    color: white;
 }

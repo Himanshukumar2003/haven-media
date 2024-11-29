@@ -63,8 +63,8 @@
 
     --bg-color-lite: rgba(255, 99, 99, 0.2);
 
-    --font-1: "Lora", serif;
-    --font-2: "Montserrat", sans-serif;
+    --font-1: "Catamaran", serif;
+    --font-2: "Raleway", sans-serif;
 }
 
 img {
@@ -467,6 +467,14 @@ a {
 .dropdown-toggle::after {
     border-top: 0.3em solid var(--accent-color);
     vertical-align: 0.1em;
+}
+
+
+.sectionTow {
+    padding: 10em 2em 3em 2em;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
 .section {

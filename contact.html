@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="transparent bg-red-color" id="navbar">
+        <div class="r-container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="logo-container">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="image/logo-two.png" alt="hevn-media" class="img-fluid logo">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto mb-2 mb-xl-0 gap-lg-4 gap-2 px-xl-0 px-4">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " aria-current="page" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="service.html">Services</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" aria-current="page" href="results.html">Results</a>
+                            </li>
+                        </ul>
+                        <a href="/contact.html" class="btn btn-dark-color rounded-pill fs-6 fw-semibold mb-xl-0 mb-3">
+                            Book a Call
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="main">
+        <div class="sectionTow position-relative" style="background-image: url(image/image-1920x900-6.jpg); ">
+            <div class="image-overlay"></div>
+            <div class="r-container h-100 position-relative" style="z-index: 2;">
+                <div class="d-flex flex-column w-100 h-100 justify-content-center align-items-center mx-auto text-center text-white gap-3 py-5"
+                    style="max-width: 895px;">
+                    <h2 class="font-1 m-0 fw-bold">Contact us</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class=" active" aria-current="page">Contact us</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section">
+
+
+                <div class="form-container">
+                    <div class="error-banner" id="errorBanner">
+                        <span>There is <span id="errorCount">1</span> error on this page. Please correct it before
+                            moving
+                            on.</span>
+                        <button id="seeErrors">See Errors</button>
+                    </div>
+                    <div class="form-heading">
+                        <h3>Brand Enrollment</h3>
+                        <p class="subtitle">Please provide your business details so our BD team can contact you.</p>
+
+                    </div>
+                    <div class="boder-line-two"></div>
+                    <form id="enrollmentForm" novalidate>
+                        <div class="form-inputs">
+                            <div class="name-fields">
+                                <div class="input-group">
+                                    <label for="firstName">First Name <span class="required">*</span></label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="lastName">Last Name <span class="required">*</span></label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                    <div class="error-message">This field is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                                <div class="error-message">Please enter a valid email address.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required>
+                                <div class="error-message">Please enter a valid phone number.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="website">Website Link <span class="required">*</span></label>
+                                <input type="url" id="website" name="website" placeholder="www.example.com" required>
+                                <div class="error-message">Please enter a valid website URL.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="services">What services are you looking for: <span
+                                        class="required">*</span></label>
+                                <select class="custom-select" id="services" name="services" required>
+                                    <option value="">Please Select</option>
+                                    <option value="service1">Performance Marketing (Meta + Google)</option>
+                                    <option value="service2">B2B Marketing (Google + Retention)</option>
+                                    <option value="service3">Ecommerce Website Development</option>
+                                    <option value="service4">Professional Website Development</option>
+                                    <option value="service5">CRM Implementation</option>
+                                    <option value="service5">Business Audit</option>
+                                </select>
+                                <div class="error-message">Please select a service.</div>
+                            </div>
+                        </div>
+                        <div class="boder-line-two"></div>
+
+                        <div class="sumit-btn">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="d-flex flex-column gap-3">
+
+                        <div class="social-icons">
+                            <h5 class="">Follow us on</h5>
+                            <a href="/https://www.facebook.com/havnmedia" aria-label="Facebook"><i
+                                    class="bi bi-facebook"></i></a>
+
+                            <a href="https://www.instagram.com/havnmedia" aria-label="Instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                        </div>
+
+                        <div class="main-links">
+                            <h5>Main links</h5>
+                            <div class="d-flex justify-content-center flex-wrap">
+                                <a href="index.html" class="mb-2">Home</a>
+                                <a href="about.html" class="mb-2">About</a>
+                                <a href="/schedule.html" class="mb-2">schedule</a>
+                                <a href="service.html" class="mb-2">Service</a>
+                                <a href="results.html" class="mb-2">Results</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts-container">
+                        <div class="contacts-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <div class="content">
+                                <a href="tel:9999227125" class="title">+91 9999227125</a>
+                            </div>
+                        </div>
+                        <div class="contacts-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <div class="content">
+                                <a href="mailto:karan@havnmedia.com" class="title">karan@havnmedia.com</a>
+                            </div>
+                        </div>
+                        <div class="contacts-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <div class="content">
+                                <p class="title">101, NH-19, CRRI, Ishwar Nagar, Okhla, New Delhi, Delhi 110044 </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="copyright  text-center">
+                        <a href="index.html"> <span>&copy; 2024 Havn Media All Rights Reserved</span></a>
+                    </div>
+                </div>
+
+
+            </footer>
+        </div>
+        <script src="js/contact.js"></script>
+</body>
+
+</html>

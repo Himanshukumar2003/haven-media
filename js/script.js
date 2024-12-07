@@ -10,13 +10,3 @@ window.onscroll = function () {
 
 };
 
-
-$(function () {
-  $(".navbar-toggler").on("click", function () {
-    const navbar = document.getElementById("navbar");
-
-    $(this).toggleClass("open");
-  });
-});
-
-

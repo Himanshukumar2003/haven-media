@@ -2606,7 +2606,7 @@ p span {
 
 .carousel {
     display: flex;
-    width: 300px;
+    width: 400px;
     animation: scroll 5s linear infinite;
 }
 
@@ -2634,6 +2634,11 @@ p span {
 .carousel-item p {
     margin-bottom: 0 !important;
     font-size: 21px !important;
+}
+
+.carousel-item i {
+    font-size: 40px !important;
+    color: var(--accent-color);
 }
 
 .icon-container {

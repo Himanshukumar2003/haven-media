@@ -33,69 +33,32 @@ document.addEventListener('DOMContentLoaded', function () {
             input.classList.remove('error');
         });
 
-        // Validate First Name
-        const firstName = document.getElementById('firstName');
-        if (!firstName.value.trim()) {
-            showError(firstName, 'This field is required.');
-            errors++;
-            firstError = firstError || firstName;
-        }
-
-        // Validate Last Name
-        const lastName = document.getElementById('lastName');
-        if (!lastName.value.trim()) {
-            showError(lastName, 'This field is required.');
-            errors++;
-            firstError = firstError || lastName;
-        }
-
-        // Validate Email
-        const email = document.getElementById('email');
-        if (!email.value.trim()) {
-            showError(email, 'This field is required.');
-            errors++;
-            firstError = firstError || email;
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-            showError(email, 'Please enter a valid email address.');
-            errors++;
-            firstError = firstError || email;
-        }
-
-        // Validate Phone
-        const phone = document.getElementById('phone');
-        if (!phone.value.trim()) {
-            showError(phone, 'This field is required.');
-            errors++;
-            firstError = firstError || phone;
-        } else if (phone.value.replace(/\D/g, '').length !== 10) {
-            showError(phone, 'Please enter a valid 10-digit phone number.');
-            errors++;
-            firstError = firstError || phone;
-        }
-
-        // Validate Website
-        const website = document.getElementById('website');
-        if (!website.value.trim()) {
-            showError(website, 'This field is required.');
-            errors++;
-            firstError = firstError || website;
-        } else {
-            try {
-                new URL(website.value.startsWith('http') ? website.value : `https://${website.value}`);
-            } catch {
-                showError(website, 'Please enter a valid website URL.');
+        const validateInput = (id, validator, message) => {
+            const input = document.getElementById(id);
+            if (!validator(input.value.trim())) {
+                input.classList.add('error');
+                const errorMessage = input.nextElementSibling;
+                errorMessage.textContent = message;
+                errorMessage.classList.add('visible');
                 errors++;
-                firstError = firstError || website;
+                firstError = firstError || input;
             }
-        }
+        };
 
-        // Validate Services
-        const services = document.getElementById('services');
-        if (!services.value) {
-            showError(services, 'Please select a service.');
-            errors++;
-            firstError = firstError || services;
-        }
+        // Validate each field
+        validateInput('firstName', val => val !== '', 'This field is required.');
+        validateInput('lastName', val => val !== '', 'This field is required.');
+        validateInput('email', val => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val), 'Please enter a valid email address.');
+        validateInput('phone', val => val.replace(/\D/g, '').length === 10, 'Please enter a valid phone number.');
+        validateInput('website', val => {
+            try {
+                new URL(val.startsWith('http') ? val : `https://${val}`);
+                return true;
+            } catch {
+                return false;
+            }
+        }, 'Please enter a valid website URL.');
+        validateInput('services', val => val !== '', 'Please select a service.');
 
         // Update error banner
         if (errors > 0) {
@@ -104,18 +67,25 @@ document.addEventListener('DOMContentLoaded', function () {
             firstError.focus();
         } else {
             errorBanner.classList.remove('visible');
-            alert('Form submitted successfully!');
-            form.reset();
+
+            // Collect form data and send it to PHP
+            const formData = new FormData(form);
+
+            fetch('submit_enrollment.php', {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.text())
+                .then(data => {
+                    alert('Form submitted successfully!');
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error submitting the form.');
+                });
         }
     });
-
-    // Helper function to show error for an input
-    function showError(input, message) {
-        input.classList.add('error');
-        const errorMessage = input.nextElementSibling;
-        errorMessage.textContent = message;
-        errorMessage.classList.add('visible');
-    }
 
     // Scroll to first error when clicking "See Errors"
     seeErrorsButton.addEventListener('click', function () {

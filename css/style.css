@@ -2991,6 +2991,10 @@ select.error {
     justify-content: center;
 }
 
+form button {
+    cursor: pointer !important;
+}
+
 form button[type="submit"] {
     background-color: var(--accent-color);
     color: white;

@@ -2596,44 +2596,44 @@ p span {
 
 
 
-
-
 .carousel-container {
     width: 100%;
-
+    background-color: var(--bg-color-lite);
     overflow: hidden;
     margin-bottom: 20px;
+    padding: 40px
 }
 
 .carousel {
     display: flex;
-    width: calc(250px * 12);
-    animation: scroll 15s linear infinite;
+    width: 300px;
+    animation: scroll 5s linear infinite;
 }
 
 .carousel-reverse {
-    animation: scroll 15s linear infinite reverse;
+    animation: scroll 5s linear infinite reverse;
 }
 
 .carousel-item {
-    flex: 0 0 250px;
     margin-right: 20px;
     border-radius: 8px;
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-color-lite);
     font-size: 14px;
     font-weight: 500;
     text-align: center;
     border-radius: 20px;
     padding: 10px;
     box-sizing: border-box;
+    white-space: nowrap;
+
 }
 
 .carousel-item p {
-    margin-bottom: 0px !important;
+    margin-bottom: 0 !important;
+    font-size: 21px !important;
 }
 
 .icon-container {
@@ -2654,6 +2654,7 @@ p span {
         transform: translateX(-50%);
     }
 }
+
 
 
 .crative-img {

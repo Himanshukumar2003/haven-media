@@ -1,0 +1,162 @@
+.hero-title {
+    color: var(--light-red-color);
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.btn-primary-custom {
+    background-color: var(--light-red-color);
+    border-color: var(--light-red-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: black;
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--light-red-color);
+    color: var(--light-red-color);
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--light-red-color) !important;
+    color: white;
+}
+
+.floating-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.purple-circle {
+    background-color: var(--light-red-color) !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-group {
+    display: flex;
+    margin-right: 0.5rem;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    border: 2px solid white;
+    margin-left: -0.5rem;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}
+
+.curved-line {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    z-index: 0;
+}
+
+.main-image-container {
+    position: relative;
+    z-index: 1;
+}
+
+.floating-card-1 {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+}
+
+.floating-card-2 {
+    position: absolute;
+    bottom: 10rem;
+    right: 0;
+    z-index: 2;
+}
+
+.floating-card-3 {
+    position: absolute;
+    bottom: 15rem;
+    left: 0;
+    z-index: 2;
+}
+
+.img-over-hide {
+    overflow: hidden;
+    border-radius: 140px 0;
+}
+
+.bottom-image {
+    object-fit: contain;
+}
+
+.bottom-image img {
+    border-radius: 40px;
+    object-fit: cover;
+    max-height: 250px;
+    width: 100%;
+
+}
+
+
+
+.heder-three-heading {
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+.section-two {
+    padding: 8em 2em 2em 2em;
+}
+
+
+
+
+
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}

@@ -1981,7 +1981,6 @@ a.link:hover {
 
 
     .img-overlay {
-
         height: 100% !important;
         width: auto;
     }
@@ -2745,7 +2744,7 @@ p span {
     right: 0;
     left: 0;
     z-index: 1;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 73%);
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 73%); */
 }
 
 .pbmit-service-style-2 .pbminfotech-box-content {

@@ -669,11 +669,11 @@ a {
 }
 
 .img-overlay {
-    width: 100%;
     position: absolute;
     z-index: -1;
-    top: 0;
+    right: 0;
     left: 0;
+    width: 100%;
     opacity: 80%;
 }
 
@@ -1979,6 +1979,13 @@ a.link:hover {
         display: none !important;
     }
 
+
+    .img-overlay {
+
+        height: 100% !important;
+        width: auto;
+    }
+
     .grid-img {
         display: block !important;
     }
@@ -3100,17 +3107,24 @@ option:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-
     align-items: center;
 }
 
-.reviews-card-img img {
-    height: 100px;
-    width: 100px;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
-    object-fit: contain;
-    border-radius: 50%;
+.reviews-card-img .icon {
+    font-size: 35px;
+    padding: 10px;
+    display: flex;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 80px;
+    background-color: var(--accent-color);
 
+    width: 80px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    text-align: center;
 }
 
 

@@ -493,7 +493,7 @@ a {
     color: var(--accent-color);
 }
 
-.r-container {
+.container {
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
@@ -2016,7 +2016,7 @@ a.link:hover {
 }
 
 @media (max-width: 333px) {
-    .r-container {
+    .container {
         margin-top: -4rem !important;
     }
 

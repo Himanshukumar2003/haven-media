@@ -493,11 +493,7 @@ a {
     color: var(--accent-color);
 }
 
-.container {
-    max-width: 1140px;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 
 .bg-dark-color {
     background-color: var(--dark-color);

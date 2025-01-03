@@ -1975,6 +1975,9 @@ a.link:hover {
         display: none !important;
     }
 
+    .b2b-img {
+        min-height: 500px;
+    }
 
     .img-overlay {
         height: 100% !important;

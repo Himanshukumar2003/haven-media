@@ -1974,6 +1974,15 @@ a.link:hover {
 
 }
 
+@media (min-width: 992px) {
+
+    .items-carousel {
+        display: flex;
+        animation: scroll 32s linear infinite;
+    }
+}
+
+
 
 @media (max-width: 991px) {
     .items-carousel {
@@ -2642,10 +2651,6 @@ p span {
     padding: 40px
 }
 
-.items-carousel {
-    display: flex;
-    animation: scroll 32s linear infinite;
-}
 
 
 

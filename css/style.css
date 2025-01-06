@@ -431,6 +431,7 @@ a {
     color: var(--accent-color);
 }
 
+
 .dropdown-menu {
     background-color: white;
     border-radius: 0;
@@ -1974,14 +1975,12 @@ a.link:hover {
 
 @media (min-width: 992px) {
     .items-carousel {
-        display: flex;
         animation: scroll 32s linear infinite;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .items-carousel {
-        display: flex;
         animation: scroll 20s linear infinite;
     }
 }
@@ -2672,6 +2671,13 @@ p span {
     box-sizing: border-box;
     white-space: nowrap;
 
+
+
+}
+
+
+.items-carousel {
+    display: flex;
 }
 
 .carousel-item p {

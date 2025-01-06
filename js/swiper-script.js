@@ -1,3 +1,45 @@
+$(function () {
+    var swiperTestimonials = new Swiper('#clients-swiper', { // Use an ID here
+        autoplay: {
+            delay: 3000
+        },
+        speed: 3000,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+        loop: true,
+        grabCursor: true,
+        breakpoints: {
+            360: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 4,
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-next-btn', // Use an ID here
+            prevEl: '.swiper-prev-btn', // Use an ID here
+        },
+        pagination: {
+            el: '.swiperPagination',
+            clickable: true,
+        },
+    });
+});
+
+
+
+
+
+
+
+
+
+
 // Initialize Swiper for Clients-revies carousel
 const swiperClientsReviews = new Swiper('.Clients-revies-swiper', {
     spaceBetween: 20,
@@ -14,11 +56,9 @@ const swiperClientsReviews = new Swiper('.Clients-revies-swiper', {
         clickable: true,
     },
     breakpoints: {
-        // Large screens (lg)
         992: {
             slidesPerView: 2,
         },
-        // Medium screens (md)
         768: {
             slidesPerView: 1,
         },
@@ -66,35 +106,3 @@ $(function () {
 
 
 
-$(function () {
-    var swiperTestimonials = new Swiper('#clients-swiper', { // Use an ID here
-        autoplay: {
-            delay: 3000
-        },
-        speed: 3000,
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 10,
-        loop: false,
-        grabCursor: true,
-        breakpoints: {
-            360: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 4,
-            }
-        },
-        navigation: {
-            nextEl: '.swiper-next-btn', // Use an ID here
-            prevEl: '.swiper-prev-btn', // Use an ID here
-        },
-        pagination: {
-            el: '.swiperPagination',
-            clickable: true,
-        },
-    });
-});

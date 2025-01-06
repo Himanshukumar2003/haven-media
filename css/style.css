@@ -2632,15 +2632,12 @@ p span {
     padding: 40px
 }
 
-.carousel {
+.items-carousel {
     display: flex;
-    width: 400px;
-    animation: scroll 5s linear infinite;
+    animation: scroll 32s linear infinite;
 }
 
-.carousel-reverse {
-    animation: scroll 5s linear infinite reverse;
-}
+
 
 .carousel-item {
     margin-right: 20px;

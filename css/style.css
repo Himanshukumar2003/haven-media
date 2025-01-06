@@ -1967,10 +1967,20 @@ a.link:hover {
         height: 54px;
         width: 91px;
     }
+
+    .items-carousel {
+        animation: scroll 8s linear infinite !important;
+    }
+
 }
 
 
 @media (max-width: 991px) {
+    .items-carousel {
+        display: flex;
+        animation: scroll 20s linear infinite !important;
+    }
+
     .grid-img-two {
         display: none !important;
     }

@@ -1962,33 +1962,32 @@ a.link:hover {
     margin-top: 50px;
 }
 
-@media (max-width: 483px) {
+@media (max-width: 767px) {
     .logo {
         height: 54px;
         width: 91px;
     }
 
-    .items-carousel {
-        animation: scroll 8s linear infinite;
-    }
+
 
 }
 
 @media (min-width: 992px) {
-
     .items-carousel {
         display: flex;
         animation: scroll 32s linear infinite;
     }
 }
 
-
-
-@media (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .items-carousel {
         display: flex;
         animation: scroll 20s linear infinite;
     }
+}
+
+@media (max-width: 991px) {
+
 
     .grid-img-two {
         display: none !important;
@@ -2020,6 +2019,10 @@ a.link:hover {
 @media (max-width: 767px) {
     .marketing-img-card {
         margin-bottom: 0px;
+    }
+
+    .items-carousel {
+        animation: scroll 10s linear infinite;
     }
 
     .peragraph-result {

@@ -9,7 +9,7 @@ $(function () {
             src: src,
             frameborder: 0,
             title: title,
-            allow : "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ,
+            allow : "accelerometer; autoplay; clipboard-write; encrypted-media; gyroSEOpe; picture-in-picture; web-share" ,
             class: 'video-iframe'
         });
 

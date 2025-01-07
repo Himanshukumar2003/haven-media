@@ -101,6 +101,10 @@ body {
 }
 
 
+.accordion-body p {
+    color: #666;
+}
+
 
 h1,
 h2,

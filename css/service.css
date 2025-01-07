@@ -135,6 +135,14 @@
     width: 100%;
 }
 
+@media (max-width: 991px) {
+
+    .section-three {
+        padding: 2em 0;
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .hero-title {

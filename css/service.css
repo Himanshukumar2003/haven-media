@@ -140,15 +140,35 @@
     .hero-title {
         font-size: 2.5rem;
     }
+
+    .vedio-section {
+        height: 280px !important;
+
+    }
+
+    .section-two {
+        padding: 1em 0 !important;
+    }
+
 }
 
 
 
 .section-two {
-    padding: 8em 2em 2em 2em;
+    padding: 8em 0;
 }
 
 
+.section-three {
+    padding: 6em 0;
+}
+
+
+.vedio-section {
+    border-radius: 10px;
+    height: 400px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 
 
 

@@ -57,7 +57,7 @@
 .desc {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     height: 100%;
     flex-direction: column;
     color: #fff;

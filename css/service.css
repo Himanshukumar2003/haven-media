@@ -138,7 +138,7 @@
 @media (max-width: 991px) {
 
     .section-three {
-        padding: 2em 0;
+        padding: 2em 0 !important;
     }
 }
 

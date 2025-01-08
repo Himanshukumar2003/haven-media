@@ -149,7 +149,7 @@ h6 {
     font-weight: 700 !important;
 }
 
-span,
+
 button,
 a {
     font-size: 18px;
@@ -1739,7 +1739,7 @@ a.link:hover {
         font-size: 14px;
     }
 
-    span,
+
     button,
     a {
         font-size: 13px;

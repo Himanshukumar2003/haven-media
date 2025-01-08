@@ -1,15 +1,67 @@
-.hero-section .video-container {
-    aspect-ratio: none !important;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.page-header {
+    padding: 0px 100px;
+}
+
+
+
+
+
+.page-header h2 {
+    font-size: 50px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.1em !important;
+}
+
+.page-header h6 {
+    color: #000000 !important;
+    font-family: "Montserrat", Sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    text-transform: capitalize;
+    line-height: 1.4em !important;
+}
+
+.page-header h5 {
+    color: #000000;
+    font-family: "Montserrat", Sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    line-height: 1.4em !important;
+}
+
+
+
+
+
+
+
+.hero-page-headeection .video-container {
     overflow: hidden;
 }
 
+
+.lending-page-nav {
+    background-color: #000000;
+    text-align: center;
+
+}
+
+.lending-page-nav h2 a {
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+}
+
 .video-section {
-    padding: 0px 120px;
+    padding: 0px 100px;
 }
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 40.25%;
+    padding-bottom: 50.25%;
     height: 0;
     border-radius: 20px 20px 0 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -45,20 +97,6 @@
     max-width: 800px;
     margin: 0 auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -202,9 +240,28 @@
     width: 100%;
 }
 
+
+@media (min-width: 992px) {
+    .page-header h2 {
+        font-size: 50px !important;
+    }
+
+}
+
+
 @media (max-width: 991px) {
 
+    .lending-page-nav {
+        padding: 20px;
+    }
 
+    .page-header {
+        padding: 0px !important;
+    }
+
+    .page-header h2 {
+        font-size: 35px !important;
+    }
 
 
     .video-section {
@@ -239,7 +296,7 @@
 
 
 .section-three {
-    padding: 6em 0;
+    padding: 50px 0;
 }
 
 
@@ -262,4 +319,10 @@
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.highlighter {
+    color: var(--accent-color);
+    font-size: auto !important;
 }

@@ -271,8 +271,15 @@
 }
 
 
+@media (max-width: 471px) {}
+
+
 
 @media (max-width: 768px) {
+    .page-header h5 {
+        font-size: 18px !important;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -325,4 +332,11 @@
 .highlighter {
     color: var(--accent-color);
     font-size: auto !important;
+}
+
+
+
+.service-btn {
+    color: white !important;
+    font-weight: 700;
 }

@@ -2351,7 +2351,6 @@ li::marker {
     max-height: 400px;
     object-fit: contain;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-    aspect-ratio: 1;
     border-radius: 10px;
 }
 
@@ -3204,4 +3203,10 @@ option:hover {
         height: 100%;
         top: 0;
     }
+}
+
+
+.service-btn {
+    color: white !important;
+    font-weight: 700;
 }

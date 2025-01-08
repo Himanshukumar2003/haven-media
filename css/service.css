@@ -1,3 +1,70 @@
+.hero-section .video-container {
+    aspect-ratio: none !important;
+    overflow: hidden;
+}
+
+.video-section {
+    padding: 0px 120px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 40.25%;
+    height: 0;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.case-study-banner {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 1rem;
+    font-size: 1.125rem;
+    border-radius: 0 0 20px 20px;
+
+    font-weight: 500;
+}
+
+.top-banner {
+    font-weight: 600;
+}
+
+.revenue-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero-title {
     color: var(--light-red-color);
     font-weight: 700;
@@ -137,9 +204,13 @@
 
 @media (max-width: 991px) {
 
-    .section-three {
-        padding: 2em 0 !important;
+
+
+
+    .video-section {
+        padding: 0px !important;
     }
+
 }
 
 

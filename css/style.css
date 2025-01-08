@@ -1013,48 +1013,6 @@ a {
     opacity: 0.4;
 }
 
-.video-container {
-    aspect-ratio: 3/2;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    border-radius: 10px;
-}
-
-.video-iframe {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.video-btn {
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    width: 4rem;
-    background-color: var(--accent-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    font-size: 2rem;
-    color: white;
-    border: none;
-    opacity: 0.7;
-}
-
-.video-btn:hover {
-    opacity: 1;
-    color: white;
-}
-
-.border-custom {
-    border-width: 0px 1px 0px 0px;
-    border-color: var(--accent-color);
-    border-style: solid;
-}
-
 
 .card {
     border: none;
@@ -3161,15 +3119,89 @@ option:hover {
 }
 
 
-.owl-item {
-    height: 100% !important;
+
+
+.work-brief p {
+    font-size: 21px !important;
+    font-weight: 400;
+
 }
 
-.owl-stage-outer {
+
+
+
+
+
+.misson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
     height: 100%;
 }
 
-.owl-stage {
+.misson p {
+    text-align: center;
+}
 
-    height: 100% !important;
+.misson::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--accent-color);
+    /* Orange border */
+    border-radius: 10px;
+    z-index: -1;
+    /* Make sure it stays behind the card */
+    transition: all 0.8s ease;
+    visibility: hidden;
+    /* Initially hidden */
+    opacity: 0;
+    /* Initially invisible */
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+
+}
+
+/* Hover effect: animate the border on hover */
+.misson:hover::before {
+    visibility: visible;
+    /* Make the border visible */
+    opacity: 1;
+    box-shadow: none;
+    /* Fade in the border */
+    animation: border-animation 1s forwards;
+    /* Apply the border animation */
+}
+
+/* Define the border animation: stroke only from top to bottom */
+@keyframes border-animation {
+    0% {
+        height: 0;
+        top: 0;
+    }
+
+    50% {
+        height: 100%;
+        top: 0;
+    }
+
+    100% {
+        height: 100%;
+        top: 0;
+    }
 }

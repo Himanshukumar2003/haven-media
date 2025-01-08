@@ -1,13 +1,13 @@
 $(function () {
-    var swiperTestimonials = new Swiper('#clients-swiper', { // Use an ID here
+    var swiperTestimonials = new Swiper('#clients-swiper', {
         autoplay: {
-            delay: 3000
+            delay: 3000,
         },
-        speed: 3000,
+        speed: 5000,
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 10,
-        loop: true,
+        loop: true, // Set loop to false to control navigation buttons manually
         grabCursor: true,
         breakpoints: {
             360: {
@@ -18,91 +18,42 @@ $(function () {
             },
             1024: {
                 slidesPerView: 4,
-            }
+            },
         },
         navigation: {
-            nextEl: '.swiper-next-btn', // Use an ID here
-            prevEl: '.swiper-prev-btn', // Use an ID here
+            nextEl: '.swiper-next-btn',
+            prevEl: '.swiper-prev-btn',
         },
         pagination: {
             el: '.swiperPagination',
             clickable: true,
         },
+        on: {
+            slideChange: function () {
+                updateNavigationButtons(this);
+            },
+            init: function () {
+                updateNavigationButtons(this); // Ensure buttons are updated on initialization
+            },
+        },
     });
-});
 
+    function updateNavigationButtons(swiper) {
+        const prevButton = $(swiper.navigation.prevEl);
+        const nextButton = $(swiper.navigation.nextEl);
 
+        // Enable or disable the "Previous" button
+        if (swiper.isBeginning) {
+            prevButton.addClass('disabled').prop('disabled', true);
+        } else {
+            prevButton.removeClass('disabled').prop('disabled', false);
+        }
 
-
-
-
-
-
-
-
-// Initialize Swiper for Clients-revies carousel
-const swiperClientsReviews = new Swiper('.Clients-revies-swiper', {
-    spaceBetween: 20,
-    autoplay: {
-        delay: 2000
-    },
-    speed: 2000,
-    navigation: {
-        nextEl: '.swiper-next-btn',
-        prevEl: '.swiper-prev-btn',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        992: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 1,
-        },
-
+        // Enable or disable the "Next" button
+        if (swiper.isEnd) {
+            nextButton.addClass('disabled').prop('disabled', true);
+        } else {
+            nextButton.removeClass('disabled').prop('disabled', false);
+        }
     }
 });
-
-
-
-
-$(function () {
-    var swiperTestimonials = new Swiper('#swiperTestimonials', { // Use an ID here
-        autoplay: {
-            delay: 2000
-        },
-        speed: 2000,
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 10,
-        loop: false,
-        grabCursor: true,
-        breakpoints: {
-            360: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 1,
-            },
-            1024: {
-                slidesPerView: 1,
-            }
-        },
-        navigation: {
-            nextEl: '#swiperNextBtn', // Use an ID here
-            prevEl: '#swiperPrevBtn', // Use an ID here
-        },
-        pagination: {
-            el: '#swiperPagination', // Use an ID here
-            clickable: true,
-        },
-    });
-});
-
-
-
-
-

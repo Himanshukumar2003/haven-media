@@ -3207,6 +3207,26 @@ option:hover {
 
 
 .service-btn {
-    color: white !important;
+    color: white;
     font-weight: 700;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+
+.service-btn i {
+    transition: transform 0.4s ease;
+    margin-left: 8px;
+}
+
+
+.service-btn:hover {
+    color: var(--accent-color);
+}
+
+.service-btn:hover i {
+    transform: translateX(10px) !important;
 }

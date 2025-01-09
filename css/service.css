@@ -333,10 +333,3 @@
     color: var(--accent-color);
     font-size: auto !important;
 }
-
-
-
-.service-btn {
-    color: white !important;
-    font-weight: 700;
-}

@@ -934,11 +934,15 @@ a {
 .breadcrumb {
     align-items: center;
     gap: 20px;
+}
+
+.breadcrumb-item {
     width: 100%;
 }
 
 .breadcrumb .breadcrumb-item>a {
     color: white;
+
 }
 
 .breadcrumb .breadcrumb-item.active {

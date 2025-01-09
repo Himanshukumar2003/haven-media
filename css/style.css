@@ -3230,3 +3230,8 @@ option:hover {
 .service-btn:hover i {
     transform: translateX(10px) !important;
 }
+
+
+.bg-four {
+    background-color: #f3f2f2;
+}

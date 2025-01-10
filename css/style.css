@@ -936,9 +936,7 @@ a {
     gap: 20px;
 }
 
-.breadcrumb-item {
-    width: 100%;
-}
+
 
 .breadcrumb .breadcrumb-item>a {
     color: white;
@@ -3239,4 +3237,50 @@ option:hover {
 
 .bg-four {
     background-color: #f7f7f7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.schedule-card ul li {
+    display: flex;
+    gap: 2px;
+}
+
+
+.schedule-card span {
+    font-weight: 500;
+}
+
+
+.schedule-card {
+    background-color: #fff2f2;
+    /* Halka red color */
+    backdrop-filter: blur(10px);
+    font-family: 'Montserrat', sans-serif !important;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-card p {
+    font-size: 18px;
+
+}
+
+.schedule-card .audit-card {
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
 }

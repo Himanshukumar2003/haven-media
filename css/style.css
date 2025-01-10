@@ -936,7 +936,10 @@ a {
     gap: 20px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2eb8505035111773c6d13d9c85fc5e92e79d09c8
 
 .breadcrumb .breadcrumb-item>a {
     color: white;
@@ -3238,6 +3241,7 @@ option:hover {
 .bg-four {
     background-color: #f7f7f7;
 }
+<<<<<<< HEAD
 
 
 
@@ -3284,3 +3288,5 @@ option:hover {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
 }
+=======
+>>>>>>> 2eb8505035111773c6d13d9c85fc5e92e79d09c8

@@ -3,11 +3,12 @@ $(function () {
         autoplay: {
             delay: 3000,
         },
-        speed: 5000,
+        speed: 1000,
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 10,
-        loop: true, // Set loop to false to control navigation buttons manually
+        loop: true,
+        dots: true,
         grabCursor: true,
         breakpoints: {
             360: {
@@ -49,7 +50,6 @@ $(function () {
             prevButton.removeClass('disabled').prop('disabled', false);
         }
 
-        // Enable or disable the "Next" button
         if (swiper.isEnd) {
             nextButton.addClass('disabled').prop('disabled', true);
         } else {

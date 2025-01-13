@@ -987,19 +987,36 @@ a {
 #clients-swiper .swiper-navigation {
     position: absolute;
     right: 0;
-    bottom: 2rem;
+    bottom: 0rem;
     z-index: 10;
     padding-inline: 1rem;
 
 }
 
 #clients-swiper .swiper-prev-btn {
-    color: black;
+    color: white;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 #clients-swiper .swiper-next-btn {
-    color: black;
+    color: white;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -3238,7 +3255,7 @@ option:hover {
     background-color: #f7f7f7;
 }
 
-<<<<<<< HEAD .schedule-card ul li {
+.schedule-card ul li {
     display: flex;
     gap: 2px;
 }

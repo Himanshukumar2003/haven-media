@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="icon" type="image/png" href="image/tab-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
     <title>Blog</title>
 </head>
@@ -80,7 +81,7 @@
             <div class="container">
                 <div class="d-flex flex-column justify-content-center gap-lg-5 gap-3">
                     <div class="d-flex flex-column gap-3 text-center justify-content-center mx-auto"
-                        style="max-width: 658px;">
+                        style="max-width: 658px;" data-aos-delay="300" data-aos="fade-right">
                         <span class="accent-color font-1 fw-semibold">News And Blog</span>
                         <h3 class="font-1 fw-semibold lh-1">WHAT'S HAPPENING AT OUR MARKETING AGENCY</h3>
                         <p>
@@ -90,7 +91,7 @@
                     </div>
                     <div class="row row-cols-xl-3 row-cols-1">
                         <div class="col mb-3">
-                            <div class="card">
+                            <div class="card" data-aos="fade-up" data-aos-delay="200">
                                 <div class="card-image rounded-3 overflow-hidden">
                                     <img src="image/image-600x400-2.jpg" alt="" class="img-fluid">
                                 </div>
@@ -106,7 +107,7 @@
                             </div>
                         </div>
                         <div class="col mb-3">
-                            <div class="card ">
+                            <div class="card " data-aos="fade-up" data-aos-delay="400">
                                 <div class="card-image rounded-3 overflow-hidden">
                                     <img src="image/image-600x400-3.jpg" alt="The Future of Paid Media:"
                                         class="img-fluid">
@@ -123,7 +124,7 @@
                             </div>
                         </div>
                         <div class="col mb-3">
-                            <div class="card">
+                            <div class="card" data-aos="fade-up" data-aos-delay="600">
                                 <div class="card-image rounded-3 overflow-hidden">
                                     <img src="image/image-600x400-4.jpg" alt="Navigating the Challenges of Paid"
                                         class="img-fluid">
@@ -141,7 +142,7 @@
                             </div>
                         </div>
                         <div class="col mb-3">
-                            <div class="card">
+                            <div class="card" data-aos="fade-up" data-aos-delay="800">
                                 <div class="card-image rounded-3 overflow-hidden">
                                     <img src="image/image-600x400-7.jpg" alt="The Ultimate Guide to Scaling"
                                         class="img-fluid">
@@ -158,7 +159,7 @@
                             </div>
                         </div>
                         <div class="col mb-3">
-                            <div class="card">
+                            <div class="card" data-aos="fade-up" data-aos-delay="1000">
                                 <div class="card-image rounded-3 overflow-hidden">
                                     <img src="image/image-600x400-8.jpg"
                                         alt="The Power of Conversion Rate Optimization " class="img-fluid">
@@ -186,29 +187,32 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="d-flex flex-column gap-3">
-
+            <div class="d-flex flex-column gap-3" data-aos="fade-up">
+                <!-- Social Icons Section -->
                 <div class="social-icons">
-                    <h5 class="">Follow us on</h5>
-                    <a href="/https://www.facebook.com/havnmedia" aria-label="Facebook"><i
-                            class="bi bi-facebook"></i></a>
-
-                    <a href="https://www.instagram.com/havnmedia" aria-label="Instagram"><i
-                            class="bi bi-instagram"></i></a>
+                    <h5>Follow us on</h5>
+                    <a href="https://www.facebook.com/havnmedia" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/havnmedia" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
                 </div>
 
+                <!-- Main Links Section -->
                 <div class="main-links">
                     <h5>Main links</h5>
                     <div class="d-flex justify-content-center flex-wrap">
                         <a href="index.html" class="mb-2">Home</a>
                         <a href="about.html" class="mb-2">About</a>
-                        <a href="/contact.html" class="mb-2">Contact us</a>
+                        <a href="contact.html" class="mb-2">Contact us</a>
                         <a href="service.html" class="mb-2">Service</a>
                         <a href="results.html" class="mb-2">Results</a>
                     </div>
                 </div>
             </div>
-            <div class="contacts-container">
+
+            <div class="contacts-container" data-aos="fade-up" data-aos-delay="200">
                 <div class="contacts-item">
                     <i class="bi bi-telephone-fill"></i>
                     <div class="content">
@@ -224,22 +228,30 @@
                 <div class="contacts-item">
                     <i class="bi bi-geo-alt-fill"></i>
                     <div class="content">
-                        <p class="title">101, NH-19, CRRI, Ishwar Nagar, Okhla, New Delhi, Delhi 110044 </p>
-
+                        <p class="title">101, NH-19, CRRI, Ishwar Nagar, Okhla, New Delhi, Delhi 110044</p>
                     </div>
                 </div>
             </div>
 
-
-
-            <div class="copyright  text-center">
-                <a href="index.html"> <span>© 2025 Havn Media - All Rights Reserved</span></a>
+            <div class="copyright text-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="index.html">
+                    <span>© 2025 Havn Media - All Rights Reserved</span>
+                </a>
             </div>
         </div>
-
-
     </footer>
     <!-- scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            AOS.init({
+                duration: 1000, // Animation duration in milliseconds
+                offset: 100, // Trigger offset in pixels
+                once: true, // Whether animation should happen only once
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
     <script src="js/vendor/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

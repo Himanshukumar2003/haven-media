@@ -69,6 +69,10 @@
     --font-2: "Raleway", serif;
 }
 
+
+
+
+
 img {
     width: 100%;
 }
@@ -2379,7 +2383,7 @@ p span {
 }
 
 .highlight {
-    color: var(--accent-color);
+    color: var(--accent-color) !important;
 }
 
 .brands-card {
@@ -3285,3 +3289,96 @@ option:hover {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
 }
+
+
+
+
+.scale-animation {
+    animation: scaleUp 1.5s ease-in-out forwards;
+    transform: scale(0);
+    animation-delay: 2s;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ml9 {
+    position: relative;
+    font-weight: 200;
+    font-size: 2em;
+}
+
+.ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml9 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+}
+
+
+
+
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.4em;
+}
+
+.ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    overflow: hidden;
+}
+
+.ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+/* .ml9 .highlighter::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    transition: width 0.5s ease-in-out;
+}
+
+.ml9 .highlighter:hover::after {
+    width: 100%;
+} */

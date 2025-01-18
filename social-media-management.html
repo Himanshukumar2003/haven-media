@@ -27,25 +27,38 @@
             <div class="container">
                 <div class="page-header">
                     <div class="text-center mb-4">
-                        <h6>
+                        <h6 data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                             #1 Ecommerce Marketing Agency For CBD Brands In UNITED STATES 🇺🇸
                         </h6>
                     </div>
 
                     <!-- Main Headline -->
                     <div class="text-center mb-5">
-                        <h2 class="main-heading mb-4">
-                            Get more <span class="highlighter"> organic reach </span> with our <span
-                                class="highlight">Organic Growth Management Service</span> for your business!
-                        </h2>
-                        <h5>
+                        <div class="text-center mb-4">
+                            <h2 class="main-heading ml6">
+                                <span class="text-wrapper">
+                                    <span class="letters">Get more</span>
+                                    <span class="highlighter letters"> organic reach </span>
+                                    <span class="letters">with our </span>
+                                    <span class="highlighter letters"> Organic Growth Management Service </span>
+                                    <span class="letters">for your <br> business!</span>
+                                </span>
+                            </h2>
+
+                        </div>
+
+
+
+
+                        <h5 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
                             We Help CBD Ecommerce Brands Add $1M-$3M Per Year In Additional Revenue Profitably!
                         </h5>
                     </div>
 
                     <!-- Video Section -->
+
                     <div class="video-section">
-                        <div class="video-container">
+                        <div class="video-container scale-animation">
                             <div class="video-wrapper">
                                 <iframe width="560" height="315"
                                     src="https://www.youtube.com/embed/NpK8f89QfVg?si=GaMTLORXj5BUggOW"
@@ -1031,6 +1044,40 @@
                 offset: 100, // Trigger offset in pixels
                 once: true, // Whether animation should happen only once
             });
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wrap every letter in a span and handle <br>
+            document.querySelectorAll('.ml6 .letters').forEach((element) => {
+                // Replace newline characters with <br> and wrap letters in spans
+                const htmlContent = element.innerHTML
+                    .replace(/<br\s*\/?>/gi, '<br>') // Normalize <br> tags
+                    .split('<br>') // Split by <br> to handle line breaks
+                    .map(line =>
+                        line.replace(/\S/g, "<span class='letter'>$&</span>") // Wrap letters
+                    ).join('<br>'); // Join lines with <br>
+
+                element.innerHTML = htmlContent; // Set the processed HTML back
+            });
+
+            // Animation setup using anime.js
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.ml6 .letter', // Target each letter
+                    translateY: ["1.1em", 0], // Move from below
+                    translateZ: 0,
+                    opacity: [0, 1], // Add fade-in effect
+                    duration: 750, // Duration for each letter animation
+                    delay: (el, i) => 50 * i, // Delay for each letter
+                })
+                .add({
+                    targets: '.ml6', // Target the entire `.ml6`
+                    opacity: 1, // Maintain opacity
+                    duration: 1500, // Duration of this step
+                    easing: "easeOutExpo", // Smooth transition
+                });
         });
     </script>
 

@@ -121,7 +121,7 @@ h6 {
 }
 
 h1 {
-    font-size: 76px;
+    font-size: 72px;
 }
 
 h2 {
@@ -1048,6 +1048,10 @@ a {
 }
 
 @media (max-width: 469px) {
+    .header-cards {
+        margin-top: -2em !important;
+    }
+
     .card-two {
         min-height: 224px !important
     }
@@ -2013,6 +2017,7 @@ a.link:hover {
     .marketing-img-card {
         margin-bottom: 0px;
     }
+
 
     .items-carousel {
         animation: scroll 10s linear infinite;
@@ -3357,7 +3362,7 @@ option:hover {
 .ml6 {
     position: relative;
     font-weight: 900;
-    font-size: 3.4em;
+
 }
 
 .ml6 .text-wrapper {

@@ -1052,6 +1052,11 @@ a {
         margin-top: -2em !important;
     }
 
+    .main-header {
+        height: 95vh;
+
+    }
+
     .card-two {
         min-height: 224px !important
     }

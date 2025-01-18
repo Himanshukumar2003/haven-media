@@ -26,7 +26,7 @@
         <div class="section-three ">
             <div class="container">
                 <div class="page-header">
-                    <div class="text-center mb-4">
+                    <div class="text-center " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                         <h6>
                             #1 Ecommerce Marketing Agency For CBD Brands In UNITED STATES 🇺🇸
                         </h6>
@@ -34,20 +34,28 @@
 
                     <!-- Main Headline -->
                     <div class="text-center mb-5">
-                        <h2 class="main-heading mb-4">
-                            <span class="highlighter"> Generate leads </span> which actually converts and qualify with
-                            our <span class="highlighter">
-                                performance 180 solutions
-                            </span>
 
-                        </h2>
-                        <h5>
+
+                        <h1 class="ml6 font-1 fw-bold mb-0" style="font-size: 3em !important;">
+                            <span class="text-wrapper text-wrapper-two">
+                                <span class="highlighter letters">Generate leads</span>
+                                <span class="letters">which actually converts and qualify with our</span>
+                                <span class="highlighter letters">performance 180 solutions</span>
+                            </span>
+                        </h1>
+
+
+
+
+
+
+                        <h5 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
                             We Help CBD Ecommerce Brands Add $1M-$3M Per Year In Additional Revenue Profitably!
                         </h5>
                     </div>
 
                     <div class="video-section">
-                        <div class="video-container">
+                        <div class="video-container scale-animation">
                             <div class="video-wrapper">
                                 <iframe width="560" height="315"
                                     src="https://www.youtube.com/embed/NpK8f89QfVg?si=GaMTLORXj5BUggOW"
@@ -956,6 +964,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             AOS.init({
@@ -964,7 +973,32 @@
                 once: true, // Whether animation should happen only once
             });
         });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all elements with the .letters class
+            document.querySelectorAll('.ml6 .letters').forEach((element) => {
+                element.innerHTML = element.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+            });
+
+            // Animation using anime.js
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.ml6 .letter', // Target each .letter
+                    translateY: ["1.1em", 0], // Animate from below
+                    translateZ: 0,
+                    opacity: [0, 1], // Add fade-in effect
+                    duration: 750, // Duration of animation per letter
+                    delay: (el, i) => 48 * i, // Delay for each letter
+                })
+                .add({
+                    targets: '.ml6',
+                    opacity: 1,
+                    duration: 1500,
+                    easing: "easeOutExpo",
+                });
+        });
+
     </script>
+
 
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

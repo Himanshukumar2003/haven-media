@@ -9,9 +9,9 @@ anime.timeline({ loop: false })
     .add({
         targets: '.ml9 .letter:not(.highlighter)', // Exclude highlighter letters
         scale: [0, 1],
-        duration: 1500,
+        duration: 2000,
         elasticity: 600,
-        delay: (el, i) => 45 * (i + 1),
+        delay: (el, i) => 60 * (i + 1),
     })
     .add({
         targets: '.ml9',

@@ -94,3 +94,99 @@
 </body>
 
 </html>
+
+
+
+
+
+<!-- indix .html  // Wrap every letter in a span
+        // Select the text wrapper
+        // Wrap every word (including special characters) in a span
+       
+
+
+             // Wrap every letter in a span
+        var textWrapper = document.querySelector('.ml6 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/(\S+)/g, "<span class='letter'>$&</span>");
+
+        // Animation setup using anime.js
+        anime.timeline({ loop: false }) // No looping
+            .add({
+                targets: '.ml6 .letter',
+                opacity: [0, 1], // Fade-in effect
+                translateY: ["1.1em", 0], // Animate from below
+                duration: 750,
+                delay: (el, i) => 200 * i // Delay between words
+            });
+
+            .add({
+                targets: '.ml6 .letter',
+                translateY: ["1.1em", 0],
+                translateZ: 0,
+                duration: 750,
+                delay: (el, i) => 50 * i
+            })
+            .add({
+                targets: '.ml6',
+                opacity: 1,
+                duration: 3000,
+                easing: "easeOutExpo",
+                delay: 3000
+            })
+            .add({
+                targets: '.ml6',
+                opacity: 1,
+                duration: 3000,
+                easing: "easeOutExpo",
+            });
+ -->
+
+
+
+
+
+
+<!-- 
+
+media   document.addEventListener('DOMContentLoaded', () => {
+            // Wrap every letter in a span and handle <br>
+        
+
+            
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wrap every letter in a span and handle <br>
+            document.querySelectorAll('.ml6 .letters').forEach((element) => {
+                // Replace newline characters with <br> and wrap letters in spans
+                const htmlContent = element.innerHTML
+                    .replace(/<br\s*\/?>/gi, '<br>') // Normalize <br> tags
+                    .split('<br>') // Split by <br> to handle line breaks
+                    .map(line =>
+                        line.replace(/\S/g, "<span class='letter'>$&</span>") // Wrap letters
+                    ).join('<br>'); // Join lines with <br>
+
+                element.innerHTML = htmlContent; // Set the processed HTML back
+            });
+
+            // Animation setup using anime.js
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.ml6 .letter', // Target each letter
+                    translateY: ["1.1em", 0], // Move from below
+                    translateZ: 0,
+                    opacity: [0, 1], // Add fade-in effect
+                    duration: 750, // Duration for each letter animation
+                    delay: (el, i) => 50 * i, // Delay for each letter
+                })
+                .add({
+                    targets: '.ml6', // Target the entire `.ml6`
+                    opacity: 1, // Maintain opacity
+                    duration: 1500, // Duration of this step
+                    easing: "easeOutExpo", // Smooth transition
+                });
+        });
+           });
+
+
+
+-->

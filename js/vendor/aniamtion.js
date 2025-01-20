@@ -1,29 +1,17 @@
+// Select all `.letters` elements
+var textWrappers = document.querySelectorAll('.ml6 .letters');
 
-// Wrap every letter in a span
-document.querySelectorAll('.ml9 .letters').forEach((element) => {
-    element.innerHTML = element.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// Apply span wrapping for each `.letters` element
+textWrappers.forEach((textWrapper) => {
+    textWrapper.innerHTML = textWrapper.textContent.replace(/(\S+)/g, "<span class='letter'>$&</span>");
 });
 
-// Animate text
-anime.timeline({ loop: false })
+// Animation setup using anime.js
+anime.timeline({ loop: false }) // No looping
     .add({
-        targets: '.ml9 .letter:not(.highlighter)', // Exclude highlighter letters
-        scale: [0, 1],
-        duration: 2000,
-        elasticity: 600,
-        delay: (el, i) => 60 * (i + 1),
-    })
-    .add({
-        targets: '.ml9',
-        opacity: 1,
-        duration: 1000,
-        easing: 'easeOutExpo',
+        targets: '.ml6 .letter',
+        opacity: [0, 1], // Fade-in effect
+        translateY: ["1.1em", 0], // Animate from below
+        duration: 1000, // Increased duration (per letter animation)
+        delay: (el, i) => 230 * i // Increased delay between letters
     });
-
-
-
-
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.ml11 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
-

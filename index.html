@@ -62,7 +62,7 @@
 
     <main>
         <div class="section position-relative main-header" style=" height: 91vh;">
-            <div class="container w-100 position-relative w-100 h-100 text-white" style="z-index: 22;">
+            <div class="container position-relative w-100 h-100 text-white" style="z-index: 22;">
                 <div class="d-flex flex-column gap-3 header-text-section justify-content-center align-items-center text-center h-100 mx-auto"
                     style="max-width: 886px ;">
                     <span class="accent-color font-1 fw-semibold pt-5 pt-md-0  " data-aos="fade-up"
@@ -72,7 +72,9 @@
 
                     <h1 class="ml6 font-1 fw-bold mb-0">
                         <span class="text-wrapper">
-                            <span class="letters"> HAVN Media: Building Brand Loyalty <br> in the Digital Age</span>
+                            <span class="letters"> HAVN Media: Building Brand
+                                Loyalty
+                                in the Digital Age</span>
                         </span>
                     </h1>
 
@@ -1190,32 +1192,23 @@
                 once: true, // Whether animation should happen only once
             });
         });
-        // Wrap every letter in a span
+
+
         var textWrapper = document.querySelector('.ml6 .letters');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+        textWrapper.innerHTML = textWrapper.textContent.replace(/(\S+)/g, "<span class='letter'>$&</span>");
 
         // Animation setup using anime.js
-        anime.timeline({ loop: false })
+        anime.timeline({ loop: false }) // No looping
             .add({
                 targets: '.ml6 .letter',
-                translateY: ["1.1em", 0],
-                translateZ: 0,
+                opacity: [0, 1], // Fade-in effect
+                translateY: ["1.1em", 0], // Animate from below
                 duration: 750,
-                delay: (el, i) => 50 * i
-            })
-            .add({
-                targets: '.ml6',
-                opacity: 1,
-                duration: 3000,
-                easing: "easeOutExpo",
-                delay: 3000
-            })
-            .add({
-                targets: '.ml6',
-                opacity: 1,
-                duration: 3000,
-                easing: "easeOutExpo",
+                delay: (el, i) => 200 * i // Delay between words
             });
+
+
+
     </script>
 
 

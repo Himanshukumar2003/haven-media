@@ -106,6 +106,9 @@ body {
 
 
 
+
+
+
 .accordion-body p {
     color: #666;
 }
@@ -3381,7 +3384,9 @@ option:hover {
 .ml6 .letter {
     display: inline-block;
     line-height: 1em;
+    word-wrap: break-word;
 }
+
 
 /* .ml9 .highlighter::after {
     content: '';

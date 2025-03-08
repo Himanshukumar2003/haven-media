@@ -2261,9 +2261,32 @@ a.link:hover {
     overflow: hidden;
 }
 
+.btn1 i{
+    animation: pulse 1.5s infinite alternate;
+        font-size: 20px;
+}
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
 
+    50% {
+        transform: scale(1.4);
+    }
 
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn1 {
+    color: white;
+    display: flex;
+    border-radius: 10px !important;
+    gap: 10px;
+    text-decoration: none;
+}
 
 
 .blog-card .btn {

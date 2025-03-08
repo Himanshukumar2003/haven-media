@@ -2281,9 +2281,12 @@ a.link:hover {
 }
 
 .btn1 {
+
+
     color: white;
     display: flex;
-    border-radius: 10px !important;
+    padding: 12px 30px !important;
+    border-radius: 10px;
     gap: 10px;
     text-decoration: none;
 }

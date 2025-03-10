@@ -4,189 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule a call with Havn Media</title>
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
+    <title>Our Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        /* Custom CSS */
+        body {
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+        }
 
-        .page-header {
-            padding: 0px 100px;
+        
+
+        .btn-outline-primary:hover {
+            background-color: #0d6efd;
+            color: white;
         }
     </style>
 </head>
 
 <body>
+ 
 
-    <div class="container-sm ">
-        <div class="schedule-card">
-            <div class="card-body p-4">
-                <div class="text-center   mb-2 align-items-center flex-wrap">
-                    <div class="schedule-profile-img mb-2">
-                        <img src="image/logo-two.png" alt="Havn Media Logo " class="profile-img bg-light-color">
-                    </div>
-                    <div>
-                        <h1 class="display-5 fw-bold text-dark">Schedule a call with Havn Media</h1>
-                    </div>
-                </div>
-
-                <p class="fw-semibold  text-center ">
-                    By the end of this Audit call, you will have a clear understanding of the next steps you can
-                    take for your
-                    business to start generating consistent and reliable results online with Funnels and paid
-                    Advertising.
-                </p>
-
-                <div class="row g-4 mt-2">
-                    <div class="col-md-7">
-                        <h2 class="h3 mb-4 text-dark">This Audit Call Is Perfect For:</h2>
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle-fill  me-2"></i>
-                                <span class="text-dark">Businesses looking to convert their current website into a high
-                                    quality & streamlined funnel format.</span>
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle-fill  me-2"></i>
-                                <span class="text-dark">Businesses looking to take their offline business online.</span>
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle-fill  me-2"></i>
-                                <span class="text-dark">Businesses looking to understand their increased revenue
-                                    potential with funnels & conversion rate optimization.</span>
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle-fill  me-2"></i>
-                                <span class="text-dark">Businesses looking to maximize their conversion rates & average
-                                    order value.</span>
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle-fill me-2"></i>
-                                <span class="text-dark">Businesses looking for a reliable agency that can make their
-                                    company a priority.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="audit-card p-4 rounded text-center bg-danger">
-                            <h3 class="h4 mb-3 text-white">Book Your Audit Call</h3>
-                            <p class="mb-4 text-white">
-                                Find a time on our calendar to schedule your call today and we look forward to speaking
-                                to you soon!
-                            </p>
-                            <a href="contact.html" class="btn btn-dark-color rounded-pill fs-6  fw-semibold">Book a
-                                Call</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer text-center text-muted bg-danger p-2">
-                <small class="text-white fw-bold">Havn Media - Transforming businesses with strategic online
-                    solutions</small>
-            </div>
-        </div>
-    </div>
-
+    <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-<!-- indix .html  // Wrap every letter in a span
-        // Select the text wrapper
-        // Wrap every word (including special characters) in a span
-       
-
-
-             // Wrap every letter in a span
-        var textWrapper = document.querySelector('.ml6 .letters');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/(\S+)/g, "<span class='letter'>$&</span>");
-
-        // Animation setup using anime.js
-        anime.timeline({ loop: false }) // No looping
-            .add({
-                targets: '.ml6 .letter',
-                opacity: [0, 1], // Fade-in effect
-                translateY: ["1.1em", 0], // Animate from below
-                duration: 750,
-                delay: (el, i) => 200 * i // Delay between words
-            });
-
-            .add({
-                targets: '.ml6 .letter',
-                translateY: ["1.1em", 0],
-                translateZ: 0,
-                duration: 750,
-                delay: (el, i) => 50 * i
-            })
-            .add({
-                targets: '.ml6',
-                opacity: 1,
-                duration: 3000,
-                easing: "easeOutExpo",
-                delay: 3000
-            })
-            .add({
-                targets: '.ml6',
-                opacity: 1,
-                duration: 3000,
-                easing: "easeOutExpo",
-            });
- -->
-
-
-
-
-
-
-<!-- 
-
-media   document.addEventListener('DOMContentLoaded', () => {
-            // Wrap every letter in a span and handle <br>
-        
-
-            
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Wrap every letter in a span and handle <br>
-            document.querySelectorAll('.ml6 .letters').forEach((element) => {
-                // Replace newline characters with <br> and wrap letters in spans
-                const htmlContent = element.innerHTML
-                    .replace(/<br\s*\/?>/gi, '<br>') // Normalize <br> tags
-                    .split('<br>') // Split by <br> to handle line breaks
-                    .map(line =>
-                        line.replace(/\S/g, "<span class='letter'>$&</span>") // Wrap letters
-                    ).join('<br>'); // Join lines with <br>
-
-                element.innerHTML = htmlContent; // Set the processed HTML back
-            });
-
-            // Animation setup using anime.js
-            anime.timeline({ loop: false })
-                .add({
-                    targets: '.ml6 .letter', // Target each letter
-                    translateY: ["1.1em", 0], // Move from below
-                    translateZ: 0,
-                    opacity: [0, 1], // Add fade-in effect
-                    duration: 750, // Duration for each letter animation
-                    delay: (el, i) => 50 * i, // Delay for each letter
-                })
-                .add({
-                    targets: '.ml6', // Target the entire `.ml6`
-                    opacity: 1, // Maintain opacity
-                    duration: 1500, // Duration of this step
-                    easing: "easeOutExpo", // Smooth transition
-                });
-        });
-           });
-
-
-
--->

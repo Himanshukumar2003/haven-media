@@ -2281,13 +2281,12 @@ a.link:hover {
 }
 
 .btn1 {
-
-
     color: white;
     display: flex;
     padding: 12px 30px !important;
     border-radius: 10px;
     gap: 10px;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -2429,7 +2428,7 @@ p span {
     color: var(--accent-color) !important;
 }
 
-.brands-card {
+/* .brands-card {
     border-radius: 20px !important;
     overflow: hidden;
     background-color: #FBFBFB;
@@ -2439,16 +2438,25 @@ p span {
     justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 10px;
-}
+} */
 
-.brands-card:hover {
+/* .brands-card:hover {
     transform: scale(1.05);
+} */
+.our-patners{
+    background-color: var(--bg-color-lite);
 }
 
+.brands-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 150px;
+}
 .brands-card img {
-    width: 120px;
-    height: 120px;
-    mix-blend-mode: multiply;
+    width: 100%;
+        mix-blend-mode: multiply;
     overflow: hidden;
     object-fit: contain;
     transition: transform 0.3s ease;
@@ -3029,7 +3037,7 @@ p span {
 label {
     display: block;
     margin-bottom: 8px;
-    color: #374151.;
+    color: #374151;
     font-weight: 500;
 }
 
@@ -3169,10 +3177,10 @@ option:hover {
     justify-content: center;
     align-items: center;
     color: white;
-    height: 80px;
+    height: 60px;
     background-color: var(--accent-color);
 
-    width: 80px;
+    width: 60px;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     text-align: center;
@@ -3428,3 +3436,52 @@ option:hover {
 .ml9 .highlighter:hover::after {
     width: 100%;
 } */
+
+
+
+.service-cardTwo {
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+position: relative;
+}
+
+
+.service-cardTwo::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, transparent 50%, rgb(248, 249, 250) 50%);
+    z-index: 55 !important;
+}
+
+.service-cardTwo:hover {
+    transform: translateY(-8px);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;}
+
+.service-iconTwo {
+    color: var(--accent-color);
+    display:flex;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    background-color: var(--bg-color-lite);
+    justify-content: center;
+    border-radius: 50px;
+    align-items:center ;
+    font-size: 30px;
+}
+
+.service-iconTwo i{
+color: var(--accent-color);
+
+}

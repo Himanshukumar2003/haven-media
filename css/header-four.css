@@ -216,7 +216,7 @@
 
 .hero-section {
     color: white;
-    background: linear-gradient(135deg, #000000, #ff0000);
+    background: linear-gradient(to bottom, var(--dark-color) , var(--red-color) 100%);
     padding: 40px 20px;
     text-align: center;
     display: flex;

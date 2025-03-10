@@ -2262,7 +2262,7 @@ a.link:hover {
 }
 
 .btn1 i{
-    animation: pulse 1.5s infinite alternate;
+    animation: pulse 1.5s infinite alternate !important;
         font-size: 20px;
 }
 

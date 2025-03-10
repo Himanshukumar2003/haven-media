@@ -196,3 +196,124 @@
 .credit-footer-wrap {
     padding-bottom: 4%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-section {
+    color: white;
+    background: linear-gradient(135deg, #000000, #ff0000);
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+    align-items: center;
+}
+
+.logo-two {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;    background-color: white;
+
+}
+
+.logo-two img {
+    transform: scale(1.5);
+    object-fit: contain;
+}
+
+
+.hero-title {
+    font-size: 2.5rem !important;
+    font-weight: 700;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    font-weight: 500;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    max-width: 900px;
+font-weight: 700;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.highlighter {
+    font-weight: 800;
+}
+
+.line {
+    width: 60%;
+    max-width: 800px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 40px auto;
+}
+
+.cta-button {
+    background-color: var(--dark-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--red-color);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.highlight {
+    font-weight: 700;
+    color: var(--red-color) !important;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle,
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .line {
+        width: 80%;
+    }
+}

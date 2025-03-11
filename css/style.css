@@ -2202,6 +2202,9 @@ a.link:hover {
     box-shadow: 0 0 5px 0 rgb(0 0 0 / 12%);
     line-height: 70px;
     border-radius: 5px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 

@@ -11,14 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
           el: ".swiper-pagination",
           clickable: true,
       },
-      autoplay: false, 
+      autoplay: {
+          delay: 900, 
+      },
       breakpoints: {
-        
-          0: {   // Medium screens
+          0: {   
               slidesPerView: 2,
               spaceBetween: 20
           },
-          1024: {  // Large screens
+          1024: {  
               slidesPerView: 4,
               spaceBetween: 20
           }

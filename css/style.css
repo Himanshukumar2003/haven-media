@@ -1986,6 +1986,8 @@ a.link:hover {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
+    
     .items-carousel {
         animation: scroll 20s linear infinite;
     }
@@ -1993,7 +1995,11 @@ a.link:hover {
 
 @media (max-width: 991px) {
 
+    .brands-card{
+       min-height: auto !important;
+       max-height: 84px;
 
+    }
     .grid-img-two {
         display: none !important;
     }

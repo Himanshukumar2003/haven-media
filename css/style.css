@@ -2070,6 +2070,7 @@ a.link:hover {
 /* footer */
 
 .footer {
+    overflow: hidden;
     background-color: white;
     position: relative;
     padding-top: 4em;

@@ -216,7 +216,7 @@
 
 .hero-section {
     color: white;
-    background: linear-gradient(to bottom, var(--dark-color) , var(--red-color) 100%);
+    background: black;
     padding: 40px 20px;
     text-align: center;
     display: flex;
@@ -270,6 +270,7 @@ font-weight: 700;
 
 .highlighter {
     font-weight: 800;
+    color: white !important;
 }
 
 .line {

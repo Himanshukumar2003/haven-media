@@ -44,13 +44,13 @@
 
 
 .lending-page-nav {
-    background-color: #000000;
+    background-color: white;
     text-align: center;
 
 }
 
 .lending-page-nav h2 a {
-    color: white;
+    color: #000000;
     font-weight: 700;
     font-size: 35px;
 }

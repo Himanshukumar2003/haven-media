@@ -872,7 +872,9 @@ a {
 
 .team-container .team-designation {
     color: var(--accent-color);
-    font-size: 14px;
+    text-shadow: 2px 2px 5px rgba(255, 100, 100, 0.8);    font-size: 14px;
+    font-weight: 600;
+    text-shadow: white;
 }
 
 .team-container .team-social {

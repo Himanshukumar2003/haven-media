@@ -3561,20 +3561,3 @@ color: var(--accent-color);
 }
 
 
-.header-logo-services-pages{
-border-radius: 50%;
-background-color: white;
-overflow: hidden;
-display: flex;
-justify-content: center;
-width: 90px;
-height: 90px;
-object-fit: contain;
-border: 3px solid var(--accent-color);
-align-items: center;
-}
-
-.header-logo-services-pages img{
-object-fit: contain;
-transform: scale(1.3);
-}

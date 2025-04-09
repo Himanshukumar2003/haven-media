@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const errorCountSpan = document.getElementById('errorCount');
     const seeErrorsButton = document.getElementById('seeErrors');
 
-    // Format phone number as user types
+    // Format phone number
     document.getElementById('phone').addEventListener('input', function (e) {
         let value = e.target.value.replace(/\D/g, '');
         if (value.length > 0) {
@@ -19,19 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
         e.target.value = value;
     });
 
-    // Validate form on submit
+    // Form validation
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         let errors = 0;
         let firstError = null;
 
-        // Reset all errors
-        form.querySelectorAll('.error-message').forEach(msg => {
-            msg.classList.remove('visible');
-        });
-        form.querySelectorAll('input, select').forEach(input => {
-            input.classList.remove('error');
-        });
+        // Reset
+        form.querySelectorAll('.error-message').forEach(msg => msg.classList.remove('visible'));
+        form.querySelectorAll('input, select').forEach(input => input.classList.remove('error'));
 
         const validateInput = (id, validator, message) => {
             const input = document.getElementById(id);
@@ -45,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        // Validate each field
         validateInput('firstName', val => val !== '', 'This field is required.');
         validateInput('lastName', val => val !== '', 'This field is required.');
         validateInput('email', val => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val), 'Please enter a valid email address.');
@@ -59,8 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, 'Please enter a valid website URL.');
         validateInput('services', val => val !== '', 'Please select a service.');
+        validateInput('currentRevenue', val => val !== '', 'Please enter your current monthly revenue.');
+        validateInput('goalRevenue', val => val !== '', 'Please enter your goal revenue and timeline.');
 
-        // Update error banner
         if (errors > 0) {
             errorCountSpan.textContent = errors;
             errorBanner.classList.add('visible');
@@ -68,26 +64,23 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             errorBanner.classList.remove('visible');
 
-            // Collect form data and send it to PHP
             const formData = new FormData(form);
-
             fetch('submit_enrollment.php', {
                 method: 'POST',
                 body: formData,
             })
-                .then(response => response.text())
-                .then(data => {
-                    alert('Form submitted successfully!');
-                    form.reset();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('There was an error submitting the form.');
-                });
+            .then(response => response.text())
+            .then(data => {
+                alert('Form submitted successfully!');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form.');
+            });
         }
     });
 
-    // Scroll to first error when clicking "See Errors"
     seeErrorsButton.addEventListener('click', function () {
         const firstError = form.querySelector('.error');
         if (firstError) {

@@ -2072,6 +2072,7 @@ a.link:hover {
 .footer {
     background-color: white;
     position: relative;
+    overflow: hidden;
     padding-top: 4em;
     color: var(--dark-color);
 }
@@ -3551,3 +3552,29 @@ color: var(--accent-color);
 
 
 
+
+
+.smresult{
+    max-height: 600px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    border-radius: 10px;
+}
+
+
+.header-logo-services-pages{
+border-radius: 50%;
+background-color: white;
+overflow: hidden;
+display: flex;
+justify-content: center;
+width: 90px;
+height: 90px;
+object-fit: contain;
+border: 3px solid var(--accent-color);
+align-items: center;
+}
+
+.header-logo-services-pages img{
+object-fit: contain;
+transform: scale(1.3);
+}

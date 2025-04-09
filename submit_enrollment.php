@@ -6,9 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = $_POST['phone'];
     $website = $_POST['website'];
     $services = $_POST['services'];
+    $currentRevenue = $_POST['currentRevenue'];
+    $goalRevenue = $_POST['goalRevenue'];
 
-    $to = "your-email@example.com";
-    $subject = "New Enrollment Form Submission";
+    $to = "karan@havnmedia.com";
+    $subject = "Havn Media | New Contact Inquiry";
     $message = "
         First Name: $firstName\n
         Last Name: $lastName\n
@@ -16,8 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         Phone: $phone\n
         Website: $website\n
         Services: $services\n
+        Current Revenue: $currentRevenue\n
+        Goal Revenue: $goalRevenue\n
     ";
-    $headers = "From: noreply@example.com";
+    $headers = "From: karan@havnmedia.com";
 
     if (mail($to, $subject, $message, $headers)) {
         echo "Form submitted successfully.";

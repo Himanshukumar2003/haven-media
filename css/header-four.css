@@ -216,15 +216,23 @@
 
 .hero-section {
     color: white;
-    background: black;
+    background: url(../image/bg-cover.png) no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+  padding-top: 20px;
+}
+
+.hero-sub-section{
     padding: 40px 20px;
     text-align: center;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 90vh;
     align-items: center;
+
 }
+
 
 .logo-two {
     border-radius: 50%;

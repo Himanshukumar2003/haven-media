@@ -3561,3 +3561,24 @@ color: var(--accent-color);
 }
 
 
+
+
+
+.whatsapp {
+  background: #47a44c;
+color: white;
+  position: fixed;
+  bottom: 100px;
+  right: -176px;
+  z-index: 999;
+  padding: 7px 20px;
+  border-radius: 4px 0 0 4px;
+  font-size: 18px;
+  transition: all 300ms linear;
+  font-weight: 500;
+}
+.whatsapp:hover {
+  right: 0;
+  color: white;
+
+}

@@ -87,7 +87,7 @@
                 
                     <div class="boder-line-two"></div>
                 
-                    <form id="enrollmentForm" action="contact_us.php" method="POST" novalidate>
+                    <form id="enrollmentForm" action="submit_enrollment.php" method="POST" novalidate>
                         <div class="form-inputs">
                             <div class="name-fields">
                                 <div class="input-group">
@@ -135,7 +135,17 @@
                                 <div class="error-message">Please select a service.</div>
                             </div>
                 
-                          
+                            <div class="form-group">
+                                <label for="currentRevenue">What is your current monthly revenue? <span class="required">*</span></label>
+                                <input type="text" id="currentRevenue" name="currentRevenue" placeholder="Your current monthly revenue?" required>
+                                <div class="error-message">Please enter your current monthly revenue.</div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="goalRevenue">What is the goal revenue per month you want to grow to & in what time? <span class="required">*</span></label>
+                                <input type="text" id="goalRevenue" name="goalRevenue" placeholder="Your goal revenue and timeline" required>
+                                <div class="error-message">Please enter your goal revenue and timeline.</div>
+                            </div>
                         </div>
                 
                         <div class="boder-line-two"></div>
@@ -202,16 +212,17 @@
                     </div>
                 </div>
             </footer>
-
         </div>
         <a class="whatsapp" href="https://wa.link/vytkh6" target="_blank"><i class="fa-brands fa-whatsapp"></i> &nbsp;Say Hi! on Whatsapp</a>
 
-            <script src="js/vendor/swiper-bundle.min.js"></script>
+
+        <script src="js/vendor/swiper-bundle.min.js"></script>
         <script src="/js/script.js"></script>
         <script src="/js/swiper-script.js"></script>
         <script src="/js/vendor/isotope.pkgd.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="/js/video_embedded.js"></script>
+         <script src="js/contact.js"></script>
 </body>
 
 </html>

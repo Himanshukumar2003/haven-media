@@ -219,10 +219,13 @@
     background: url(../image/bg-cover.png) no-repeat;
     background-size: cover;
     min-height: 90vh;
-  padding-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-sub-section{
+.hero-sub-section {
     padding: 40px 20px;
     text-align: center;
     color: white;
@@ -242,7 +245,8 @@
     justify-content: center;
     align-items: center;
     height: 95px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    background-color: white;
 
 }
 
@@ -253,7 +257,7 @@
 
 
 .hero-title {
-    font-size: 2.5rem !important;
+    font-size: 2.5rem;
     font-weight: 700;
     max-width: 900px;
     margin: 0 auto 30px;
@@ -264,14 +268,13 @@
     font-size: 1.2rem;
     max-width: 800px;
     font-weight: 500;
-    margin: 0 auto 40px;
     line-height: 1.5;
 }
 
 .hero-description {
     font-size: 1.1rem;
     max-width: 900px;
-font-weight: 700;
+    font-weight: 700;
     margin: 0 auto 50px;
     line-height: 1.6;
 }

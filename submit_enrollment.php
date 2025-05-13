@@ -1,9 +1,10 @@
-<?php
+<?php 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstName = htmlspecialchars(trim($_POST['firstName']));
     $lastName = htmlspecialchars(trim($_POST['lastName']));
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $phone = htmlspecialchars(trim($_POST['phone']));
+    $countryCode = htmlspecialchars(trim($_POST['countryCode'])); // Added
     $website = filter_var(trim($_POST['website']), FILTER_SANITIZE_URL);
     $services = htmlspecialchars(trim($_POST['services']));
     $currentRevenue = htmlspecialchars(trim($_POST['currentRevenue']));
@@ -20,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 First Name: $firstName\n
 Last Name: $lastName\n
 Email: $email\n
-Phone: $phone\n
+Phone: +$countryCode $phone\n
 Website: $website\n
 Services: $services\n
 Current Revenue: $currentRevenue\n

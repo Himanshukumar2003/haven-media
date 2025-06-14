@@ -8,12 +8,25 @@ document.addEventListener("DOMContentLoaded", function () {
     let errors = 0;
     const inputs = form.querySelectorAll("input, select");
 
-    // Reset previous errors
+    // Clear old errors
     form.querySelectorAll(".error-message").forEach((msg) => {
       msg.classList.remove("visible");
       msg.style.display = "none";
     });
     inputs.forEach((input) => input.classList.remove("error"));
+
+    const isAlphabetic = (val) => /^[A-Za-z]+$/.test(val);
+    const isValidEmail = (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    const isValidURL = (val) => {
+      try {
+        const testURL = new URL(
+          val.startsWith("http") ? val : `https://${val}`
+        );
+        return !!testURL.hostname.includes(".");
+      } catch {
+        return false;
+      }
+    };
 
     const validate = (id, condition, message) => {
       const el = document.getElementById(id);
@@ -29,64 +42,79 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
 
-    // Field validations
-    validate("firstName", (val) => val !== "", "This field is required.");
-    validate("lastName", (val) => val !== "", "This field is required.");
+    // First Name validations
+    validate("firstName", (val) => val !== "", "First name is required.");
     validate(
-      "email",
-      (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
-      "Please enter a valid email address."
+      "firstName",
+      (val) => val.length >= 2,
+      "Must be at least 2 characters."
     );
+    validate("firstName", isAlphabetic, "Only alphabets allowed.");
+
+    // Last Name validations
+    validate("lastName", (val) => val !== "", "Last name is required.");
+    validate(
+      "lastName",
+      (val) => val.length >= 2,
+      "Must be at least 2 characters."
+    );
+    validate("lastName", isAlphabetic, "Only alphabets allowed.");
+
+    // Email
+    validate("email", isValidEmail, "Enter a valid email address.");
+
+    // Phone
     validate(
       "phone",
-      (val) => val.replace(/\D/g, "").length >= 10,
-      "Please enter a valid phone number."
-    );
-    validate(
-      "website",
-      (val) => {
-        try {
-          const testURL = new URL(
-            val.startsWith("http") ? val : `https://${val}`
-          );
-          return !!testURL.hostname.includes(".");
-        } catch {
-          return false;
-        }
+      function (val) {
+        return /^\d{10}$/.test(val);
       },
-      "Please enter a valid website URL."
-    );
-    validate(
-      "services",
-      (val) => val !== "" && val !== "Please select",
-      "Please select a service."
-    );
-    validate(
-      "countryCode",
-      (val) => val !== "" && val !== "Please select",
-      "Please select a country code."
-    );
-    validate(
-      "currentRevenue",
-      (val) => val !== "",
-      "Please enter your current monthly revenue."
-    );
-    validate(
-      "goalRevenue",
-      (val) => val !== "",
-      "Please enter your goal revenue and timeline."
+      "Enter a valid 10-digit phone number."
     );
 
+    // Website
+    validate("website", isValidURL, "Enter a valid website URL.");
+
+    // Services
+    validate("services", (val) => val !== "", "Please select a service.");
+
+    // Country Code
+    validate(
+      "countryCode",
+      (val) => val !== "",
+      "Please select a country code."
+    );
+
+    // reCAPTCHA validation
+    const recaptchaResponse = grecaptcha.getResponse();
+    const captchaError = document.querySelector(
+      ".g-recaptcha + .invalid-feedback"
+    );
+    if (recaptchaResponse.length === 0) {
+      if (captchaError) captchaError.style.display = "block";
+      errors++;
+    } else {
+      if (captchaError) captchaError.style.display = "none";
+    }
+
+    // Prevent form submission if errors
     if (errors > 0) {
       e.preventDefault();
-      errorCountEl.textContent = errors;
-      errorBanner.style.display = "block";
-    } else {
+      if (errorCountEl && errorBanner) {
+        errorCountEl.textContent = errors;
+        errorBanner.style.display = "block";
+      }
+    } else if (errorBanner) {
       errorBanner.style.display = "none";
     }
   });
 
-  // Scroll to first error field when "See Errors" is clicked
+  // ✅ Enforce only digits & max 10 length in real-time
+  document.getElementById("phone").addEventListener("input", function () {
+    this.value = this.value.replace(/\D/g, "").slice(0, 10);
+  });
+
+  // Scroll to first error on button click
   if (seeErrorsBtn) {
     seeErrorsBtn.addEventListener("click", function () {
       const firstError = document.querySelector(".error");

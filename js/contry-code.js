@@ -3,10 +3,7 @@ const countries = [
     code: "+91",
     name: "India",
   },
-  {
-    code: "+7 840",
-    name: "Abkhazia",
-  },
+
   {
     code: "+1",
     name: "Canada / United States",
@@ -900,7 +897,6 @@ const countries = [
 ];
 
 const selectElement = document.getElementById("countryCode");
-
 countries.forEach(function (country) {
   const option = document.createElement("option");
   option.value = country.code;
